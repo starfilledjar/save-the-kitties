@@ -77,7 +77,7 @@ class Home extends Component {
                     <Modal.Header closeButton>
                         <Modal.Title>KITTY SAVED!!</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>You&apos;re such a good person for saving the Kitty!</Modal.Body>
+                    <Modal.Body>You&apos;re such a good person for saving the kitty!</Modal.Body>
                 </Modal>
                 <Modal show={this.state.monster_show} onHide={this.handleMonsterClose}>
                     <Modal.Header closeButton>
