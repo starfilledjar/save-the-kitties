@@ -67,7 +67,9 @@ class Home extends Component {
             <div className="Home">
                 <Container>
                     <Row className="score">
-                        <Badge variant="info">Score: {this.state.score}</Badge>
+                        <h2>
+                            <Badge variant="info">Score: {this.state.score}</Badge>
+                        </h2>
                     </Row>
                     <Row>
                         <Col className="pictures"><Image src={this.state.cats_array.cats[this.state.kitty_number].cat_url} thumbnail className='cat-pic' /></Col> 
