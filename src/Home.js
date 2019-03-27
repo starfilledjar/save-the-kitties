@@ -75,7 +75,7 @@ class Home extends Component {
                 </Container>
                 <Modal show={this.state.kitty_show} onHide={this.handleKittyClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>KITTY SAVED!!</Modal.Title>
+                        <Modal.Title>{this.state.cats_array.cats[this.state.kitty_number].name} SAVED!!</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>You&apos;re such a good person for saving the kitty!</Modal.Body>
                 </Modal>
