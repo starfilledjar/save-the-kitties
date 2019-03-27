@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Button, Container, Col, Row, Modal } from 'react-bootstrap';
+import { Image, Button, Container, Col, Row, Modal, Badge } from 'react-bootstrap';
 import cats from './cats';
 import monsters from './monsters';
 import './Home.css';
@@ -67,7 +67,7 @@ class Home extends Component {
             <div className="Home">
                 <Container>
                     <Row className="score">
-                        Score: {this.state.score}
+                        <Badge variant="info">Score: {this.state.score}</Badge>
                     </Row>
                     <Row>
                         <Col className="pictures"><Image src={this.state.cats_array.cats[this.state.kitty_number].cat_url} thumbnail className='cat-pic' /></Col> 
