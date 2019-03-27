@@ -1,0 +1,9 @@
+.kitties-picture {
+    height: 400px;
+    width: 400px;
+    margin: 5px 0px 0px 5px;
+}
+
+.kitties-list {
+    list-style: none;
+}

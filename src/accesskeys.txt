@@ -1,0 +1,5 @@
+Access Key: df71037fdad0e5437cc2cb5a1f933e4bc4d388d00653094516b4a56b85bbaacc
+Secret Key: b6de25cbfb2b9bb6173de36bb1cfaf5bc6ce5a0507304488881fe78d8488a276
+Redirect URI local tests: urn:ietf:wg:oauth:2.0:oob
+Redirect URI: urn:ietf:wg:oauth:2.0:oob 
+Authorization code: 17303ceff8c375e386c0c96440d6b0c8f07ebe72187ea8fd83e6d7162d0a0eab

@@ -1,0 +1,17 @@
+.Home {
+    text-align: center;
+  }
+
+
+.cat-pic, .monster-pic {
+    height: 400px;
+    width: 400px;
+  }
+  
+  .buttons {
+    margin-top: 10px;
+  }
+  
+  .pictures {
+    margin: auto;
+  }
