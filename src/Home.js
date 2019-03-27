@@ -19,7 +19,8 @@ class Home extends Component {
             kitty_show: false,
             monster_show: false,
             kitty_number: 0,
-            monster_number: 0
+            monster_number: 0,
+            score: 0
         }
     }
 
@@ -41,12 +42,14 @@ class Home extends Component {
     }
 
     handleKittyClose() {        
-        this.setState({ kitty_show: false });
+        this.setState({ kitty_show: false,
+            score: this.state.score + 1 });
         this.getNewPair();
     }
 
     handleMonsterClose() {
-        this.setState({ monster_show: false });
+        this.setState({ monster_show: false,
+            score: this.state.score - 1 });
         this.getNewPair();
     }
 
@@ -59,31 +62,33 @@ class Home extends Component {
     }
 
     render() {
-        console.log(this.state.kitty_number);
-        console.log(this.state.monster_number);
+        console.log(this.state.score);
         return(
             <div className="Home">
                 <Container>
+                    <Row className="score">
+                        Score: {this.state.score}
+                    </Row>
                     <Row>
                         <Col className="pictures"><Image src={this.state.cats_array.cats[this.state.kitty_number].cat_url} thumbnail className='cat-pic' /></Col> 
                         <Col className="pictures"><Image src={this.state.monsters_array.monsters[this.state.monster_number].monster_url} thumbnail className='monster-pic' /></Col>
                     </Row>
                     <Row className="buttons">
-                        <Col><Button variant="success" onClick={this.handleKittyShow}>Save the kitty!</Button></Col>
-                        <Col><Button variant="danger" onClick={this.handleMonsterShow}>Save the monster!</Button></Col>
+                        <Col><Button variant="success" onClick={this.handleKittyShow}>Save {this.state.cats_array.cats[this.state.kitty_number].name}!</Button></Col>
+                        <Col><Button variant="danger" onClick={this.handleMonsterShow}>Save {this.state.monsters_array.monsters[this.state.monster_number].name}!</Button></Col>
                     </Row>
                 </Container>
                 <Modal show={this.state.kitty_show} onHide={this.handleKittyClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>{this.state.cats_array.cats[this.state.kitty_number].name} SAVED!!</Modal.Title>
+                        <Modal.Title>You saved {this.state.cats_array.cats[this.state.kitty_number].name}!</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>You&apos;re such a good person for saving the kitty!</Modal.Body>
+                    <Modal.Body>You&apos;re such a good person for saving {this.state.cats_array.cats[this.state.kitty_number].name}!</Modal.Body>
                 </Modal>
                 <Modal show={this.state.monster_show} onHide={this.handleMonsterClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>HOW COULD YOU?!?</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>I can&apos;t believe you saved the monster! You&apos;re the monster!</Modal.Body>
+                    <Modal.Body>I can&apos;t believe you saved {this.state.monsters_array.monsters[this.state.monster_number].name}! You&apos;re the monster!</Modal.Body>
                 </Modal>
             </div>
         );
